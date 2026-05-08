@@ -145,7 +145,7 @@
     const { data, error } = await supabaseClient
       .from('vize_ypzeka_26')
       .select('*')
-      .eq('No', ogrNo)
+      .eq('No', Number(ogrNo))
       .ilike('adiSoyadi', adSoyad)
       .limit(1);
 
